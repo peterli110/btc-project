@@ -1,0 +1,11 @@
+language: go
+
+go:
+  - master
+
+
+before_install:
+  - mkdir -p $GOPATH/src
+  - mv $TRAVIS_BUILD_DIR/../btc-project $GOPATH/src
+  - cd $GOPATH/src/btc-project/cmd
+  - export TRAVIS_BUILD_DIR=$GOPATH/src/btc-project

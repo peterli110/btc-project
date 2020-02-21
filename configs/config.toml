@@ -1,0 +1,20 @@
+[server]
+    addr = "0.0.0.0:8000"                   # define the port of server
+    timeout = "10s"                         # maximum timeout to handle a request
+
+[influxdb]
+    addr = "http://localhost:8086"          # influxdb address
+    username = ""                           # influxdb username
+    password = ""                           # influxdb password
+    timeout = "10s"                         # maximum timeout to handle a request
+    databaseName = "btcProject"             # main db name
+
+[redis]
+	addr = "127.0.0.1:6379"                 # redis address
+	password = ""                           # redis password
+	db = 1                                  # db index
+	maxretries = 3                          # max number of retries before giving up
+
+[constants]
+    isDev = true                            # if set to true, log will show up on stdout
+                                            # if set to false, log will be recorded in /logs dir
